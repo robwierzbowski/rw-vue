@@ -1,7 +1,7 @@
 {
   "name": "rw-vue",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "version": "0.0.0",
+  "description": "robwierzbowski.com in Vue.js",
   "author": "Rob Wierzbowski <rob.wierzbowski@gmail.com>",
   "private": true,
   "scripts": {
