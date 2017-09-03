@@ -1,4 +1,5 @@
 // http://eslint.org/docs/user-guide/configuring
+const disallowInProd = process.env.NODE_ENV === 'production' ? 2 : 0;
 
 module.exports = {
   root: true,
@@ -40,7 +41,12 @@ module.exports = {
         'optionalDependencies': ['test/unit/index.js'],
       },
     ],
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // allow debugger and console during development
+    'no-debugger': disallowInProd,
+    'no-console': disallowInProd,
+
+    // Personal alterations to AirBnB ruleset
+    'no-plusplus': 0,
+    'func-names': 0,
   },
 }
