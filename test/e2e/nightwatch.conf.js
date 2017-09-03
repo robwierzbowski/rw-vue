@@ -1,6 +1,6 @@
 require('babel-register');
 const config = require('../../config');
-const serverPath = require('selenium-server').path;
+const seleniumServerPath = require('selenium-server').path;
 const chromeDriverPath = require('chromedriver').path;
 
 // http://nightwatchjs.org/gettingstarted#settings-file
@@ -11,7 +11,7 @@ module.exports = {
 
   selenium: {
     start_process: true,
-    server_path: serverPath,
+    server_path: seleniumServerPath,
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
