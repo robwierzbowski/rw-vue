@@ -2,6 +2,7 @@
 const path = require('path');
 const prodEnv = require('./prod.env');
 const devEnv = require('./dev.env');
+const testEnv = require('./test.env');
 
 module.exports = {
   build: {
@@ -36,5 +37,8 @@ module.exports = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false,
+  },
+  test: {
+    env: testEnv,
   },
 };

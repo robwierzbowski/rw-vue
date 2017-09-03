@@ -11,9 +11,7 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('../config/test.env')
-  : config.build.env;
+const env = process.env.NODE_ENV === 'testing' ? config.test.env : config.build.env;
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
