@@ -1,6 +1,5 @@
-const merge = require('webpack-merge');
 const devEnv = require('./dev.env');
 
-module.exports = merge(devEnv, {
+module.exports = Object.assign(devEnv, {
   NODE_ENV: '"testing"',
 });
