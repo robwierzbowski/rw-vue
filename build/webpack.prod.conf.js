@@ -16,11 +16,11 @@ const env = process.env.NODE_ENV === 'testing' ? config.test.env : config.build.
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.webpackStyleLoaders({
-      sourceMap: config.build.productionSourceMap,
+      sourceMap: config.build.cssSourceMap,
       extract: true,
     }),
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: config.build.jsSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),

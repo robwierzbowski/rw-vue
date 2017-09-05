@@ -38,6 +38,7 @@ exports.vueCssLoaders = function (options = {}) {
         fallback: 'vue-style-loader',
       });
     }
+
     return ['vue-style-loader'].concat(loaders);
   }
 
