@@ -13,7 +13,7 @@ Object.keys(baseWebpackConfig.entry).forEach((name) => {
 
 module.exports = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap }),
+    rules: utils.webpackStyleLoaders({ sourceMap: config.dev.cssSourceMap }),
   },
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',

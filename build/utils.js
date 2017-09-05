@@ -9,7 +9,7 @@ exports.assetsPath = function (_path) {
   return path.posix.join(assetsSubDirectory, _path);
 };
 
-exports.cssLoaders = function (options = {}) {
+exports.vueCssLoaders = function (options = {}) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
@@ -54,9 +54,9 @@ exports.cssLoaders = function (options = {}) {
 };
 
 // Generate loaders for standalone style files (outside of .vue)
-exports.styleLoaders = function (options) {
+exports.webpackStyleLoaders = function (options) {
   const output = [];
-  const loaders = exports.cssLoaders(options);
+  const loaders = exports.vueCssLoaders(options);
 
   /* eslint-disable */
   // Lots of errors in this for-in, but not worth it to debug right now.
