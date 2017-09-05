@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import App from './App';
-import router from './router';
+import App from '@/App';
+import router from '@/router';
 
 /* eslint-disable no-unused-vars */
 const vm = new Vue({
