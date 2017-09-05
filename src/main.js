@@ -2,11 +2,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-Vue.config.productionTip = false;
-
-/* eslint-disable no-new */
-new Vue({
+/* eslint-disable no-unused-vars */
+const vm = new Vue({
   el: '#app',
   router,
-  render: h => h(App),
+  render: createElement => createElement(App),
 });
