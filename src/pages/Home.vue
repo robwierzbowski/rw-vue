@@ -1,22 +1,24 @@
 <template>
-  <div class="Hello">
+  <div class="Home">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+const name = 'Robert';
+
 export default {
-  name: 'hello',
+  name: 'home',
   data() {
     return {
-      msg: `Welcome to Your Moo.js App ${Date.now()}`,
+      msg: `Welcome Home, ${name}`,
     };
   },
 };
 </script>
 
 <style scoped>
-.Hello {
+.Home {
   font-weight: normal;
 }
 </style>
