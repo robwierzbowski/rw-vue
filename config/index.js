@@ -1,8 +1,9 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 const path = require('path');
-const prodEnv = require('./prod.env');
-const devEnv = require('./dev.env');
-const testEnv = require('./test.env');
+
+const prodEnv = { NODE_ENV: '"production"' };
+const devEnv = { NODE_ENV: '"development"' };
+const testEnv = { NODE_ENV: '"testing"' };
 
 module.exports = {
   build: {
