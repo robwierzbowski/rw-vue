@@ -14,12 +14,6 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const env = process.env.NODE_ENV === 'testing' ? config.test.env : config.build.env;
 
 const webpackConfig = merge(baseWebpackConfig, {
-  module: {
-    rules: utils.webpackStyleLoaders({
-      sourceMap: config.build.cssSourceMap,
-      extract: true,
-    }),
-  },
   devtool: config.build.jsSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
