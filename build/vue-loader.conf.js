@@ -1,8 +1,6 @@
-const config = require('../config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const cssSourceMap = isProduction ? config.build.cssSourceMap : config.dev.cssSourceMap;
 
 const devLoaders = [
   {
@@ -31,7 +29,6 @@ const prodLoaders = {
 
 module.exports = {
   loaders: isProduction ? prodLoaders : devLoaders,
-  cssSourceMap,
 
   // Handles JS requires for assets in .vue templates
   transformToRequire: {
