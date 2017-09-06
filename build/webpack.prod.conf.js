@@ -11,8 +11,6 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
-const env = process.env.NODE_ENV === 'testing' ? config.test.env : config.build.env;
-
 const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.jsSourceMap ? '#source-map' : false,
   output: {
@@ -23,7 +21,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env': env,
+      'process.env': config.build.env,
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
