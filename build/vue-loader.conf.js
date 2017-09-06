@@ -10,6 +10,7 @@ module.exports = {
       : config.dev.cssSourceMap,
     extract: isProduction,
   }),
+  // Handles JS requires for assets in .vue templates
   transformToRequire: {
     video: 'src',
     source: 'src',
