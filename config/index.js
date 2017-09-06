@@ -29,7 +29,6 @@ module.exports = {
   },
   dev: {
     env: devEnv,
-    autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
