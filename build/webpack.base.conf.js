@@ -4,7 +4,7 @@ const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
 const eslintFriendlyFormatter = require('eslint-friendly-formatter');
 
-function resolve(dir) {
+function absolutePathTo(dir) {
   return path.join(__dirname, '..', dir);
 }
 
@@ -20,7 +20,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
+      '@': absolutePathTo('src'),
     },
     symlinks: false,
   },
@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
+        include: [absolutePathTo('src'), absolutePathTo('test')],
         options: {
           formatter: eslintFriendlyFormatter,
         },
@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')],
+        include: [absolutePathTo('src'), absolutePathTo('test')],
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
