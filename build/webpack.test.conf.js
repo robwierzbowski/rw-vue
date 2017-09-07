@@ -2,10 +2,10 @@
 
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base.conf');
+const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('./shared-config');
 
-const webpackConfig = merge(baseConfig, {
+const webpackConfig = merge(baseWebpackConfig, {
   // use inline sourcemap for karma-sourcemap-loader
   devtool: '#inline-source-map',
 
