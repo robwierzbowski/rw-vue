@@ -9,7 +9,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.jsSourceMap ? '#source-map' : false,
@@ -85,28 +84,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
-        to: config.build.assetsSubDirectory,
+        to: config.assetsDirectory,
         ignore: ['.*'],
       },
     ]),
   ],
 });
 
-if (config.build.productionGzip) {
-  webpackConfig.plugins.push(
-    new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: new RegExp(
-        `\\.(${
-        config.build.productionGzipExtensions.join('|')
-        })$`,
-      ),
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-  );
-}
 
 if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin());
