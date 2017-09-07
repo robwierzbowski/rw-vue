@@ -22,44 +22,47 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': config.build.env,
     }),
+
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
       },
-      sourceMap: true,
+      sourceMap: false,
     }),
+
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
     }),
-    // Compress extracted CSS. We are using this plugin so that possible
-    // duplicated CSS from different components can be deduped.
+
+    // Compress extracted CSS
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
       },
     }),
+
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
-        : config.build.index,
+        : path.resolve(__dirname, '../dist/index.html'),
       template: 'index.html',
       inject: true,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true,
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
     }),
+
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
+
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -74,13 +77,15 @@ const webpackConfig = merge(baseWebpackConfig, {
         );
       },
     }),
+
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor'],
     }),
-    // copy custom static assets
+
+    // copy static assets
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
@@ -91,10 +96,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   ],
 });
 
-// Run the build command with an extra argument to
-// View the bundle analyzer report after build finishes:
-// `npm run build --report`
-// Set to `true` or `false` to always turn it on or off
+// Run `npm run build --report` to view the bundle analyzer report
 if (process.env.npm_config_report) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin());
 }

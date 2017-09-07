@@ -11,7 +11,6 @@ module.exports = {
 
   build: {
     env: prodEnv,
-    index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
   },
   dev: {

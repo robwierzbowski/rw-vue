@@ -1,14 +1,12 @@
-// 1. start the dev server using production config
+// start the dev server using production config
 process.env.NODE_ENV = 'testing';
 const server = require('../../build/dev-server.js');
 const spawn = require('cross-spawn');
 
 server.ready.then(() => {
-  // 2. run the nightwatch test suite against it
-  // to run in additional browsers:
-  //    1. add an entry in test/e2e/nightwatch.conf.json under "test_settings"
-  //    2. add it to the --env flag below
-  // or override the environment flag, for example: `npm run e2e -- --env chrome,firefox`
+  // to run in additional browsers: add an entry in
+  // test/e2e/nightwatch.conf.json under "test_settings" or  add it to the --env
+  // flag below.
   // For more information on Nightwatch's config file, see
   // http://nightwatchjs.org/guide#settings-file
   let opts = process.argv.slice(2);
