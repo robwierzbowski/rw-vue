@@ -24,7 +24,7 @@ module.exports = {
       selenium_host: 'localhost',
       silent: true,
       globals: {
-        devServerURL: `http://localhost:8080`,
+        devServerURL: 'http://localhost:8080',
       },
     },
 
