@@ -6,12 +6,13 @@ const devEnv = { NODE_ENV: '"development"' };
 const testEnv = { NODE_ENV: '"testing"' };
 
 module.exports = {
+  assetsPublicPath: '/',
+  assetsDirectory: 'static',
+
   build: {
     env: prodEnv,
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
@@ -20,8 +21,6 @@ module.exports = {
   },
   dev: {
     env: devEnv,
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
   },
   test: {
     env: testEnv,
