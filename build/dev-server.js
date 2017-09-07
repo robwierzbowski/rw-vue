@@ -1,19 +1,20 @@
+// Server for development and (e2e and unit?) testing.
+
 const config = require('../config');
 
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = config.dev.env.NODE_ENV;
-}
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
-const webpackConfig = (process.env.NODE_ENV === 'testing' || process.env.NODE_ENV === 'production')
-  ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf');
+
+// If running e2e tests, use prod conf
+const webpackConfig = process.env.NODE_ENV === 'development'
+  ? require('./webpack.dev.conf')
+  : require('./webpack.prod.conf');
 
 // default port where dev server listens for incoming traffic
 const port = 8080;
-
 const app = express();
 const compiler = webpack(webpackConfig);
 
@@ -49,17 +50,15 @@ app.use(hotMiddleware);
 const staticPath = path.posix.join(config.assetsPublicPath, config.assetsDirectory);
 app.use(staticPath, express.static('./static'));
 
-const uri = `http://localhost:${port}`;
-
 let readyResolve;
 const readyPromise = new Promise((resolve) => {
   readyResolve = resolve;
 });
 
 console.log('> Starting dev server...');
+
 devMiddleware.waitUntilValid(() => {
-  console.log(`> Listening at ${uri}\n`);
-  // when env is testing, don't need open it
+  console.log(`> Listening at http://localhost:${port}\n`);
   readyResolve();
 });
 
