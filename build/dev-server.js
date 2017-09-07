@@ -1,6 +1,6 @@
 // Server for development and (e2e and unit?) testing.
 
-const config = require('../config');
+const config = require('./shared-config');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
