@@ -15,7 +15,7 @@ module.exports = merge(baseWebpackConfig, {
       // dist folder
       utils.absProjectPath(config.build.assetsRoot),
       // static folder (served at root)
-      utils.absProjectPath(config.staticAssetsDirectory),
+      utils.absProjectPath('static'),
     ],
     port: 8080,
     hot: true,
