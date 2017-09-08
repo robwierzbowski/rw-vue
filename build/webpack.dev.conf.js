@@ -12,9 +12,10 @@ module.exports = merge(baseWebpackConfig, {
 
   devServer: {
     contentBase: [
-      config.build.assetsRoot,
-      // Serves content in static as root
-      path.posix.join(__dirname, '..', config.assetsDirectory),
+      // dist folder
+      path.posix.join(__dirname, '..', config.build.assetsRoot),
+      // static folder (served at root)
+      path.posix.join(__dirname, '..', config.staticAssetsDirectory),
     ],
     port: 8080,
     hot: true,
