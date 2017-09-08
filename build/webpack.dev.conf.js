@@ -12,8 +12,7 @@ module.exports = merge(baseWebpackConfig, {
 
   devServer: {
     contentBase: [
-      // dist folder
-      utils.absProjectPath(config.build.assetsRoot),
+      utils.absProjectPath('dist'),
       // static folder (served at root)
       utils.absProjectPath('static'),
     ],

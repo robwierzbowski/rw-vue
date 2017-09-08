@@ -7,7 +7,7 @@ module.exports = {
     app: './src/main.js',
   },
   output: {
-    path: config.build.assetsRoot,
+    path: utils.absProjectPath('dist'),
     filename: '[name].js',
     publicPath: '/',
   },

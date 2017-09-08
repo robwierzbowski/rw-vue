@@ -13,7 +13,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const webpackConfig = merge(baseWebpackConfig, {
   devtool: false,
   output: {
-    path: config.build.assetsRoot,
+    path: utils.absProjectPath('dist'),
     filename: 'assets/js/[name].[chunkhash].js',
     chunkFilename: 'assets/js/[id].[chunkhash].js',
   },

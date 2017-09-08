@@ -2,16 +2,15 @@ process.env.NODE_ENV = 'production';
 
 const ora = require('ora');
 const rm = require('rimraf');
-const path = require('path');
+const utils = require('./utils');
 const chalk = require('chalk');
 const webpack = require('webpack');
-const config = require('./shared-config');
 const webpackConfig = require('./webpack.prod.conf');
 
 const spinner = ora('Building for production...');
 spinner.start();
 
-rm(config.build.assetsRoot, (pathErr) => {
+rm(utils.absProjectPath('dist'), (pathErr) => {
   if (pathErr) {
     throw pathErr;
   }
