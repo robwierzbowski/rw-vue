@@ -21,6 +21,7 @@ module.exports = merge(baseWebpackConfig, {
     hot: true,
     historyApiFallback: true,
     open: true,
+    overlay: true,
   },
 
   plugins: [
