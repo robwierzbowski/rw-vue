@@ -6,8 +6,6 @@ const devEnv = { NODE_ENV: '"development"' };
 const testEnv = { NODE_ENV: '"testing"' };
 
 module.exports = {
-  assetsPublicPath: '/',
-
   build: {
     env: prodEnv,
     assetsRoot: utils.absProjectPath('dist'),
