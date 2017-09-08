@@ -50,7 +50,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[hash:7].[ext]',
-          outputPath: utils.assetsPath('img/'),
+          outputPath: 'assets/img/',
         },
       },
       {
@@ -58,7 +58,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[hash:7].[ext]',
-          outputPath: utils.assetsPath('media/'),
+          outputPath: 'assets/media/',
         },
       },
       {
@@ -66,7 +66,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[hash:7].[ext]',
-          outputPath: utils.assetsPath('fonts/'),
+          outputPath: 'assets/fonts/',
         },
       },
     ],

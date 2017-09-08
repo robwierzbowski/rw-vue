@@ -14,8 +14,8 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
+    filename: 'assets/js/[name].[chunkhash].js',
+    chunkFilename: 'assets/js/[id].[chunkhash].js',
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -32,7 +32,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css'),
+      filename: 'assets/css/[name].[contenthash].css',
     }),
 
     // Compress extracted CSS

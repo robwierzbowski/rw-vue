@@ -8,7 +8,6 @@ const testEnv = { NODE_ENV: '"testing"' };
 module.exports = {
   assetsPublicPath: '/',
   staticAssetsDirectory: 'static',
-  outputAssetsDirectory: 'assets',
 
   build: {
     env: prodEnv,
