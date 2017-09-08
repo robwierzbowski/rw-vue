@@ -1,4 +1,4 @@
-const path = require('path');
+const utils = require('./utils');
 const webpack = require('webpack');
 const config = require('./shared-config');
 const merge = require('webpack-merge');
@@ -10,15 +10,12 @@ module.exports = merge(baseWebpackConfig, {
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
 
-  // RWRW What needs absolute paths and what needs relative?
-  // Add "absolute path" helper in utils?
-
   devServer: {
     contentBase: [
       // dist folder
-      path.join(__dirname, '..', config.build.assetsRoot),
+      utils.absProjectPath(config.build.assetsRoot),
       // static folder (served at root)
-      path.join(__dirname, '..', config.staticAssetsDirectory),
+      utils.absProjectPath(config.staticAssetsDirectory),
     ],
     port: 8080,
     hot: true,

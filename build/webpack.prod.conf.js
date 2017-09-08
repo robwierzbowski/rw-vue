@@ -48,7 +48,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
-        : path.resolve(__dirname, '../dist/index.html'),
+        : utils.absProjectPath('dist/index.html'),
       template: 'index.html',
       inject: true,
       minify: {
@@ -72,7 +72,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           module.resource &&
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
-            path.join(__dirname, '../node_modules'),
+            utils.absProjectPath('node_modules'),
           ) === 0
         );
       },
@@ -88,8 +88,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // copy static assets
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '..', config.staticAssetsDirectory),
-        to: path.join(config.outputAssetsDirectory, 'static'),
+        from: utils.absProjectPath(config.staticAssetsDirectory),
+        to: 'assets/static',
         ignore: ['.gitkeep'],
       },
     ]),
