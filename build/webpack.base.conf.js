@@ -6,11 +6,13 @@ module.exports = {
   entry: {
     app: './src/main.js',
   },
+
   output: {
     path: utils.absProjectPath('dist'),
     filename: '[name].js',
     publicPath: '/',
   },
+
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -18,6 +20,7 @@ module.exports = {
     },
     symlinks: false,
   },
+
   module: {
     rules: [
       {

@@ -11,12 +11,14 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const webpackConfig = merge(baseWebpackConfig, {
-  devtool: false,
   output: {
     path: utils.absProjectPath('dist'),
     filename: 'assets/js/[name].[chunkhash].js',
     chunkFilename: 'assets/js/[id].[chunkhash].js',
   },
+
+  devtool: false,
+
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
