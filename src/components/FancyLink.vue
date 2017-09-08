@@ -1,5 +1,5 @@
 <template>
-  <a v-bind:href="href">
+  <a class="FancyLink" v-bind:href="href">
     {{ content }}
   </a>
 </template>
@@ -14,12 +14,12 @@ export default {
 </script>
 
 <style scoped>
-a {
+.FancyLink {
   text-decoration: none;
   border-bottom: black 1px solid;
 }
 
-a:hover {
+.FancyLink:hover {
   border-bottom-color: pink;
 }
 </style>
