@@ -30,7 +30,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       sourceMap: false,
     }),
 
-    // extract css into its own file
+    // Extract css into its own file
     new ExtractTextPlugin({
       filename: 'assets/css/[name].[contenthash].css',
     }),
@@ -42,9 +42,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     }),
 
-    // generate dist index.html with correct asset hash for caching.
-    // you can customize output by editing /index.html
-    // see https://github.com/ampedandwired/html-webpack-plugin
+    // Generate dist index.html with correct asset hash for caching.
+    // You can customize output by editing /index.html
+    // See https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
@@ -56,18 +56,19 @@ const webpackConfig = merge(baseWebpackConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
       },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      // Necessary to consistently work with multiple chunks via
+      // CommonsChunkPlugin
       chunksSortMode: 'dependency',
     }),
 
-    // keep module.id stable when vender modules does not change
+    // Keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
 
-    // split vendor js into its own file
+    // Split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks(module) {
-        // any required modules inside node_modules are extracted to vendor
+        // Any required modules inside node_modules are extracted to vendor
         return (
           module.resource &&
           /\.js$/.test(module.resource) &&
@@ -78,14 +79,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     }),
 
-    // extract webpack runtime and module manifest to its own file in order to
+    // Extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor'],
     }),
 
-    // copy static assets
+    // Copy assets from 'static'
     new CopyWebpackPlugin([
       {
         from: utils.absProjectPath('static'),

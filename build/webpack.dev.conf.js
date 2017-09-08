@@ -7,13 +7,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
-  // cheap-module-eval-source-map is faster for development
+  // Cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
 
   devServer: {
     contentBase: [
       utils.absProjectPath('dist'),
-      // static folder (served at root)
+      // Note: static folder is served at root in dev but moved to assets/static
+      // during build
       utils.absProjectPath('static'),
     ],
     port: 8080,
