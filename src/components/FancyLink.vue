@@ -1,5 +1,5 @@
 <template>
-  <a class="FancyLink" v-bind:href="href">
+  <a class="FancyLink" :href="href">
     {{ content }}
   </a>
 </template>

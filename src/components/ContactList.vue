@@ -1,7 +1,7 @@
 <template>
   <ul class='ContactList'>
     <li class='ContactList-item' v-for="contact in contacts">
-     <fancy-link v-bind:href='contact.href' v-bind:content='contact.content' />
+     <fancy-link :href='contact.href' :content='contact.content' />
     </li>
   </ul>
 </template>
