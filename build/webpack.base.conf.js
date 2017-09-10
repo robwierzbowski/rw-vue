@@ -49,12 +49,31 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'file-loader',
         options: {
           name: '[name].[hash:7].[ext]',
           outputPath: 'assets/img/',
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'raw-loader',
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              // TODO: Add and configure plugins
+              // Maybe remove style?
+              plugins: [
+                { removeUnknownsAndDefaults: true },
+                { sortAttrs: true },
+              ],
+            },
+          },
+        ],
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
