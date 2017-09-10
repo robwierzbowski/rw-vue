@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <h1>{{name}}</h1>
+    <h1>{{ msg }}</h1>
 
     <p>I'm a design-minded developer focusing on front-end systems, process, and teamwork. I automate everything, love the good parts of JavaScript, and actually think CSS is awesome.</p>
 
