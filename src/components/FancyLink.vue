@@ -14,12 +14,12 @@ export default {
 </script>
 
 <style scoped>
-.FancyLink {
-  text-decoration: none;
-  border-bottom: black 1px solid;
-}
+@import 'assets/styles/links.css';
 
-.FancyLink:hover {
-  border-bottom-color: pink;
+.FancyLink {
+  @mixin link-reset;
+  @mixin link;
+
+  color: initial;
 }
 </style>
