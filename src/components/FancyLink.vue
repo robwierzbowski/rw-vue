@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style scoped>
-@import 'assets/styles/links.css';
+@import 'assets/styles/utils/links.css';
 
 .FancyLink {
   @mixin link-reset;

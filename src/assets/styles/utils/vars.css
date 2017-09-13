@@ -1,0 +1,10 @@
+/* Colors */
+$off-black: hsl(0, 0%, 14%);
+$purple-desat: hsl(326, 36%, 65%);
+$pink: hsl(347, 83%, 70%);
+$pink-desat: hsl(347, 83%, 80%);
+
+/* Fonts */
+$serif-fallback-family: "Times New Roman", serif;
+$serif-webfont-family: "Charter BT", $serif-fallback-family;
+$monospace-font-family: "Consolas", monospace;

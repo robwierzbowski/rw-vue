@@ -1,4 +1,5 @@
 /* Resets */
+@import './vars.css';
 
 @define-mixin link-reset {
   text-decoration: none;
@@ -57,10 +58,10 @@
 /* Links */
 
 @define-mixin link {
-  @mixin fancy-underline black, white;
+  @mixin fancy-underline $off-black, white;
 
   &:hover,
   &:focus {
-    @mixin fancy-underline-color pink;
+    @mixin fancy-underline-color $pink-desat;
   }
 }
