@@ -11,6 +11,11 @@ export default {
 };
 </script>
 
+<!-- Global styles -->
+<style>
+@import 'assets/styles/critical.css';
+</style>
+
 <style scoped>
 .App {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
