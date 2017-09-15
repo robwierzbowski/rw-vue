@@ -44,9 +44,6 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     }),
 
-    // Generate dist index.html with correct asset hash for caching.
-    // You can customize output by editing /index.html
-    // See https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
