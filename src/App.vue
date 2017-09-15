@@ -13,13 +13,11 @@ export default {
 
 <!-- Global styles -->
 <style>
-@import 'assets/styles/critical.css';
+@import 'assets/styles/base.css';
 </style>
 
 <style scoped>
 .App {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

@@ -17,7 +17,6 @@ export default {
 @import 'assets/styles/utils/links.css';
 
 .FancyLink {
-  @mixin link-reset;
   @mixin link;
 
   color: initial;

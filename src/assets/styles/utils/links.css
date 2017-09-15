@@ -1,22 +1,4 @@
-/* Resets */
 @import './vars.css';
-
-@define-mixin link-reset {
-  text-decoration: none;
-
-  /*
-    Note: We can't use `color: inherit` in the pseudo selectors since its
-    specificity will steamroll any styles we're applying on top of link-reset.
-  */
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    outline: none;
-    text-decoration: none;
-  }
-}
 
 /* Fancy underlines */
 
@@ -42,7 +24,7 @@
   background-position: 0 $position;
 }
 
-@define-mixin fancy-underline $color, $background, $width: 1px, $position: 1.1em {
+@define-mixin fancy-underline $color, $background, $width: 1px, $position: 0.9em {
   @mixin fancy-underline-cut $background;
   @mixin fancy-underline-color $color;
   @mixin fancy-underline-size $width;
