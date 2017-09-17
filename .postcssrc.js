@@ -1,4 +1,6 @@
-// https://github.com/michael-ciniawsky/postcss-load-config
+const fs = require('fs');
+const mime = require("mime");
+const path = require("path");
 
 module.exports = {
   "plugins": {
@@ -7,6 +9,19 @@ module.exports = {
       path: 'src/'
     },
     "autoprefixer": {},
+    "postcss-functions": {
+      functions: {
+        "inline-font": function(url) {
+            url = `src/${JSON.parse(url)}`;
+            const ext = path.extname(url);
+            const mimetype = mime.getType(ext);
+            const mimestring = mimetype ? `${mimetype};` : '';
+            const data = fs.readFileSync(url, 'base64');
+
+            return `url(data:${mimestring}charset=utf-8;base64,${data})`;
+        },
+      },
+    },
     "postcss-mixins": {},
     "postcss-simple-vars": {},
     "postcss-nested": {},
