@@ -10,7 +10,7 @@ export default {
     return {
       classes: [
         'SvgIcon',
-        this.modifier ? `SvgIcon-${this.modifier}` : '',
+        this.modifier ? `--${this.modifier}` : '',
       ],
     };
   },

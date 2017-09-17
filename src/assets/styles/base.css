@@ -1,3 +1,34 @@
+/*
+  Good morning everybody!
+
+  Let's set up some conventions on our CSS.
+
+  First, we're using Vue's `scoped` CSS for every component except App. App is
+  where we import our global rules.
+
+  Even though we're using scoped CSS, we'll still use some conventions for
+  different categories of selectors. This will help us understand not just what
+  our selectors do, but what they're for.
+
+  Module:
+  CapitalizedCamelCase, identical to component name
+
+  Module part:
+  camelCase
+
+  Modifier (alternate styling, applied to different instances):
+  --camelCase
+
+  State: (alternate styling, changes with instance state):
+  -camelCase
+
+  Example:
+
+  .Article
+    .title
+    .headerImg.--big.-loaded
+*/
+
 @import './utils/vars.css';
 @import './fonts.css';
 @import './reset.css';
