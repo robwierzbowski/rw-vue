@@ -13,8 +13,7 @@
 :root {
   font-size: 112.5%; /* 18px */
   line-height: 1.45;
-  font-synthesis: none;
-
+  font-synthesis: none; /* disable browser-created font variants */
 }
 
 ::selection {
@@ -25,12 +24,12 @@
 }
 
 html {
-  font-family: $serif-fallback-family;
+  font-family: $serif-initial-family;
   color: $off-black;
   background-color: white;
 
-  &.is-fontsLoaded {
-    font-family: $serif-webfont-family;
+  &.-fontsLoaded {
+    font-family: $serif-family;
   }
 }
 
@@ -105,7 +104,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: $monospace-font-family;
+  font-family: $monospace-family;
 }
 
 /* Set sub, sup without affecting line-height: gist.github.com/413930 */

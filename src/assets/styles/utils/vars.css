@@ -6,5 +6,6 @@ $pink-desat: hsl(347, 83%, 80%);
 
 /* Fonts */
 $serif-fallback-family: "Times New Roman", serif;
-$serif-webfont-family: "Charter BT", $serif-fallback-family;
-$monospace-font-family: "Consolas", monospace;
+$serif-initial-family: "Charter BT Subset", $serif-fallback-family;
+$serif-family: "Charter BT", $serif-fallback-family;
+$monospace-family: "Consolas", monospace;

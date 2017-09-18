@@ -30,6 +30,6 @@
 */
 
 @import './utils/vars.css';
-@import './fonts.css';
+@import './font-face.css';
 @import './reset.css';
 @import './set.css';
