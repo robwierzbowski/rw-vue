@@ -1,7 +1,7 @@
 <template>
   <ul class='ContactList'>
-    <li class='ContactList-item' v-for="contact in contacts">
-      <svg-icon :icon="contact.icon" :modifier="contact.modifier"></svg-icon>
+    <li class='item' v-for="contact in contacts">
+      <svg-icon class="icon" :icon="contact.icon" :modifier="contact.modifier"></svg-icon>
 
       <fancy-link :href='contact.href' :content='contact.content' />
     </li>
@@ -51,5 +51,9 @@ export default {
 <style scoped>
 .ContactList {
   list-style-type: none;
+}
+
+.icon {
+  margin-right: 0.5rem;
 }
 </style>

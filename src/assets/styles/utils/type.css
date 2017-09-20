@@ -1,0 +1,16 @@
+/* Type style mixins */
+
+@define-mixin t-one {
+  font-size: 1.85rem;
+  line-height: 1.2;
+}
+
+@define-mixin t-two {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@define-mixin t-base {
+  font-size: 1rem;
+  line-height: 1.4;
+}
