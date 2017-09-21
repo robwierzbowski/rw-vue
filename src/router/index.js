@@ -7,8 +7,8 @@ Vue.use(Router);
 function updateMeta(route) {
   const description = document.head.querySelector('meta[name=description]');
 
-  document.title = route.meta.description;
   description.setAttribute('content', route.meta.title);
+  document.title = route.meta.description;
 }
 
 const router = new Router({
