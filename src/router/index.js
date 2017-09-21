@@ -19,8 +19,8 @@ const router = new Router({
       component: Home,
 
       meta: {
-        title: 'A place for Rob',
-        description: 'Damn dog, look at all that Rob',
+        title: 'Rob Wierzbowski',
+        description: 'Rob Wierzbowski | Senior Web Developer working out of Pittsburgh, PA',
       },
     },
   ],
