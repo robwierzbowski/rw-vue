@@ -85,7 +85,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       chunks: ['vendor'],
     }),
 
-    // Copy assets from 'static'
+    // Copy non-webpack files
     new CopyWebpackPlugin([
       {
         from: utils.absProjectPath('static'),
