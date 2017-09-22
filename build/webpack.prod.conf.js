@@ -90,7 +90,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       {
         from: utils.absProjectPath('static'),
         to: '',
-        ignore: ['.gitkeep'],
+        ignore: ['.*'],
       },
     ]),
   ],
