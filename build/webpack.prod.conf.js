@@ -89,7 +89,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
         from: utils.absProjectPath('static'),
-        to: 'assets/static',
+        to: '',
         ignore: ['.gitkeep'],
       },
     ]),
