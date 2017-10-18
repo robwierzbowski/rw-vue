@@ -1,19 +1,11 @@
 <template>
-  <span v-html='icon' :class='classes'></span>
+  <span v-html='icon' class='SvgIcon'></span>
 </template>
 
 <script>
 export default {
   name: 'svg-icon',
   props: ['icon', 'modifier'],
-  data() {
-    return {
-      classes: [
-        'SvgIcon',
-        this.modifier ? `--${this.modifier}` : '',
-      ],
-    };
-  },
 };
 </script>
 

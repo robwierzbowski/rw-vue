@@ -39,11 +39,21 @@
 
 /* Links */
 
-@define-mixin link {
+@define-mixin link-base {
   @mixin fancy-underline $off-black, white;
+
+  color: initial;
+}
+
+@define-mixin link-activated {
+  @mixin fancy-underline-color $pink-desat;
+}
+
+@define-mixin link {
+  @mixin link-base;
 
   &:hover,
   &:focus {
-    @mixin fancy-underline-color $pink-desat;
+    @mixin link-activated;
   }
 }
