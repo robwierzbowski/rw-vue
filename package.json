@@ -5,6 +5,7 @@
   "author": "Rob Wierzbowski <rob.wierzbowski@gmail.com>",
   "private": true,
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "build:serve": "npm run build && http-server dist -o",
