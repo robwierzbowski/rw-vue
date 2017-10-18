@@ -18,7 +18,6 @@ module.exports = merge(baseWebpackConfig, {
       utils.absProjectPath('static'),
     ],
     port: 8080,
-    hot: true,
     historyApiFallback: true,
     open: true,
     overlay: true,

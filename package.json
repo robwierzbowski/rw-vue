@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --open --hot --config ./build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "build:serve": "npm run build && http-server dist -o",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
