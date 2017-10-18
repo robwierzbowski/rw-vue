@@ -1,10 +1,10 @@
 <template>
-  <main class="App">
-    <h1 class="title">Rob Wierzbowski</h1>
+  <main class='App'>
+    <h1 class='title'>Rob Wierzbowski</h1>
 
     <router-view></router-view>
 
-    <footer class="footer">
+    <footer class='footer'>
       <contact-list></contact-list>
     </footer>
   </main>

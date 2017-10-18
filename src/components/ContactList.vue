@@ -1,7 +1,7 @@
 <template>
   <ul class='ContactList'>
-    <li class='item' v-for="contact in contacts">
-      <svg-icon class="icon" :icon="contact.icon" :modifier="contact.modifier"></svg-icon>
+    <li class='item' v-for='contact in contacts'>
+      <svg-icon class='icon' :icon='contact.icon' :modifier='contact.modifier'></svg-icon>
 
       <fancy-link :href='contact.href' :content='contact.content' />
     </li>

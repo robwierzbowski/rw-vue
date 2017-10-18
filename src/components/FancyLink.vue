@@ -1,5 +1,5 @@
 <template>
-  <a class="FancyLink" :href="href">
+  <a class='FancyLink' :href='href'>
     {{ content }}
   </a>
 </template>

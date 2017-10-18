@@ -1,5 +1,5 @@
 <template>
-  <span v-html="icon" :class="classes"></span>
+  <span v-html='icon' :class='classes'></span>
 </template>
 
 <script>
