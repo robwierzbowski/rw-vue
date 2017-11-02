@@ -53,6 +53,10 @@ video {
   vertical-align: middle;
 }
 
+img {
+  display: block;
+}
+
 button,
 [type="button"],
 [type="date"],
