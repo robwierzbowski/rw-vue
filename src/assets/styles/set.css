@@ -19,7 +19,6 @@
 ::selection {
   color: white;
   text-shadow: none;
-  background-color: $pink-desat;
   background-color: $purple-desat;
 }
 
