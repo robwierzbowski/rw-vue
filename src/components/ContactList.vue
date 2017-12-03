@@ -1,6 +1,6 @@
 <template>
   <ul class='ContactList'>
-    <li class='item' v-for='contact in contacts'>
+    <li class='item' v-for='contact in contacts' :key='contact.key'>
       <a class='link' :href='contact.href'>
         <svg-icon class='icon' :icon='contact.icon' />
         <span class='content'>{{ contact.content }}</span>
@@ -24,16 +24,19 @@ export default {
     return {
       contacts: [
         {
+          key: 'iconMail',
           icon: iconMail,
           href: 'mailto:rob.wierzbowski@gmail.com',
           content: 'rob.wierzbowski@gmail.com',
         },
         {
+          key: 'iconTwitter',
           icon: iconTwitter,
           href: 'https://twitter.com/robwierzbowski',
           content: '@robwierzbowski',
         },
         {
+          key: 'iconGithub',
           icon: iconGithub,
           href: 'https://github.com/robwierzbowski',
           content: 'robwierzbowski',
@@ -44,7 +47,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 @import 'assets/styles/utils/vars.css';
 @import 'assets/styles/utils/links.css';
 
