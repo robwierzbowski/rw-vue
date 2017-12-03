@@ -23,9 +23,9 @@ export default {
   a {
     @mixin link;
   }
-}
 
-p {
-  margin-bottom: 1rem;
+  p {
+    margin-bottom: 1rem;
+  }
 }
 </style>
