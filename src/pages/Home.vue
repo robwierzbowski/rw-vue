@@ -4,7 +4,7 @@
 
     <p>You can find me living and working in Pittsburgh, PA.</p>
 
-    <p>I'm free for consulting and full time remote work in 2017.</p>
+    <p>I work as a lead front-end developer at <a href="https://www.stitchfix.com">Stitch Fix.</a></p>
   </article>
 </template>
 
@@ -14,9 +14,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
+@import 'assets/styles/utils/links.css';
+
 .Home {
   margin-bottom: 2.75rem;
+
+  a {
+    @mixin link;
+  }
 }
 
 p {
