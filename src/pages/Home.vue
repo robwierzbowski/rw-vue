@@ -16,7 +16,7 @@ export default {
 @import 'assets/styles/utils/links.css';
 
 .Home {
-  margin-bottom: 4rem;
+  margin-bottom: 2.75rem;
 
   a {
     @mixin link;
