@@ -13,7 +13,7 @@ const devLoaders = [
   },
   {
     postcss: {
-      loader: 'css-loader',
+      loader: 'postcss-loader',
       options: {
         sourceMap: true,
       },
