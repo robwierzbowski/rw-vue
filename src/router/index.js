@@ -20,7 +20,7 @@ const router = new Router({
 
       meta: {
         title: 'Rob Wierzbowski',
-        description: 'Rob Wierzbowski | Senior Web Developer working out of Pittsburgh, PA',
+        description: 'Rob Wierzbowski | Web Engineer in Pittsburgh, PA',
       },
     },
   ],
