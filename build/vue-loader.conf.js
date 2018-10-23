@@ -37,4 +37,6 @@ module.exports = {
     img: 'src',
     image: 'xlink:href',
   },
+
+  cssSourceMap: true,
 };
