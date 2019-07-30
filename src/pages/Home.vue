@@ -5,7 +5,7 @@
     </p>
 
     <p>
-      I currently work as a lead engineer at <a href="https://www.stitchfix.com">Stitch Fix</a>. When I'm not escaping to another metropolis you'll find me at home in Pittsburgh, PA.
+      I currently work as a lead engineer at <a href="https://www.stitchfix.com">Stitch Fix</a>. When I'm not exploring another metropolis you'll find me at home in Pittsburgh, PA.
     </p>
   </article>
 </template>
