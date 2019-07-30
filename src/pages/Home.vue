@@ -1,8 +1,12 @@
 <template>
   <article class='Home'>
-    <p>I'm a design-minded developer focusing on front-end systems, process, and teamwork. I automate everything, love the good parts of JavaScript, and actually think CSS is awesome.</p>
+    <p>
+      As a brand-focused engineer, I grow teams and lead technical intiatives that move the idea of a product forward. I bring fifteen years of cross-disiplinary experience and a developed understanding of technical, tactical, and organizational interconenectedness to the groups I work with.
+    </p>
 
-    <p>I work as a lead developer at <a href="https://www.stitchfix.com">Stitch Fix</a>. When I'm not escaping to some other metropolis, you'll find me at home in Pittsburgh, PA.</p>
+    <p>
+      I currently work as a lead engineer at <a href="https://www.stitchfix.com">Stitch Fix</a>. When I'm not escaping to another metropolis you'll find me at home in Pittsburgh, PA.
+    </p>
   </article>
 </template>
 
@@ -16,7 +20,7 @@ export default {
 @import 'assets/styles/utils/links.css';
 
 .Home {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.5rem;
 
   a {
     @mixin link;
